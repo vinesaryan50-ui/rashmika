@@ -1,56 +1,118 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Rashmika</title>
+<title>Cricket Guru</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
+
 body{
 margin:0;
 padding:0;
-font-family: Arial;
-background: linear-gradient(135deg,#000428,#004e92);
+font-family: Arial, sans-serif;
+background:url('6275944983768534407.jpg') no-repeat center top/cover;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
 color:white;
 text-align:center;
+overflow:hidden;
 }
-.box{
-margin-top:80px;
+
+.overlay{
+background:rgba(0,0,0,0.65);
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
 }
-img{
-width:130px;
-border-radius:50%;
-border:4px solid white;
+
+.content{
+position:relative;
+z-index:2;
+padding:20px;
+max-width:400px;
 }
+
+h2{
+font-weight:normal;
+margin-bottom:5px;
+font-size:20px;
+}
+
 h1{
-font-size:32px;
-margin:15px 0;
+font-size:38px;
+margin:5px 0 15px;
+letter-spacing:1px;
 }
-p{
-font-size:18px;
-color:#ddd;
-}
+
 .btn{
 display:inline-block;
-margin-top:25px;
-padding:15px 35px;
-background:#ffcc00;
-color:black;
-font-weight:bold;
-border-radius:30px;
-text-decoration:none;
+margin-top:15px;
+padding:15px 25px;
+background:linear-gradient(45deg,#0044ff,#001aff);
+color:white;
 font-size:18px;
+font-weight:bold;
+border-radius:12px;
+text-decoration:none;
+box-shadow:0 0 20px rgba(0,0,255,0.6);
 }
+
+.countdown{
+margin-top:25px;
+font-size:16px;
+}
+
+.circle{
+margin:12px auto;
+width:85px;
+height:85px;
+border-radius:50%;
+background:#0033ff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:30px;
+font-weight:bold;
+box-shadow:0 0 15px rgba(0,0,255,0.8);
+}
+
 </style>
 </head>
+
 <body>
 
-<div class="box">
-<img src="https://postimg.cc/RN5JC4kF/150">
-<h1>RASHMIKA QUEEN</h1>
-<p>India No.1 Cricket Analysis Channel 🔥</p>
+<div class="overlay"></div>
+
+<div class="content">
+<h2>India No.1 Tipper</h2>
+<h1>RASMIKA QUEEN</h1>
+
 <a class="btn" href="https://t.me/+h0gzAUWDdfIxNTU9" target="_blank">
-JOIN TELEGRAM NOW
+Join The Original Cricket Guru
 </a>
+
+<div class="countdown">
+FREE JOINING ENDS IN...
+<div class="circle" id="timer">20</div>
 </div>
+
+</div>
+
+<script>
+var timeLeft = 20;
+var timer = document.getElementById("timer");
+
+var countdown = setInterval(function(){
+timeLeft--;
+timer.innerHTML = timeLeft;
+if(timeLeft <= 0){
+clearInterval(countdown);
+}
+},1000);
+</script>
 
 </body>
 </html>
